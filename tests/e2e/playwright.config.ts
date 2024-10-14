@@ -1,5 +1,14 @@
 import { defineConfig, devices } from "@playwright/test";
 
+/**
+ * If you need envs, you can use loadEnv from vite to load them from the .env file.
+ * E.g.:
+ *
+ * process.env = { ...process.env, ...loadEnv("", process.cwd()) };
+ *
+ * https://vite.dev/guide/api-javascript.html#loadenv
+ */
+
 const port = parseInt(process.env.VITE_PORT ?? "4173"); // Vite's default port when running `vite preview`
 
 /**
